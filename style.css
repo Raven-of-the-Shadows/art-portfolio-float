@@ -119,6 +119,8 @@ p{
 ul{
     background-color: white;
     border-radius: 20px;
+    width: 270px;
+    margin: auto;
 }
 li{
     font-size: 30pt;
