@@ -1,31 +1,183 @@
 /*-----------------------------------------------------general---------------------------------------------------------*/
+*{
+    box-sizing: border-box;
+}
 body{
     background-image: url(images/bg.jpeg);
     background-repeat: no-repeat;
     background-size: 100%;
-    font-family: 'Pacifico', cursive;
+    font-family: 'Caveat', cursive;
+    color: white;
+    background-attachment: fixed;
 }
 .container{
     width: 1200px;
     margin: auto;
 }
+.row::after{
+    content: '';
+    display: block;
+    clear: both;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+img{
+    width: 100%;
+}
 /*-----------------------------------------------------header---------------------------------------------------------*/
+header{
+    text-align: center;
+}
+.logo{
+    font-family: 'Pacifico', cursive;
+    font-size: 80pt;
+    float: left;
+    overflow: hidden;
+}
+.contact{
+    padding: 30px;
+    font-size: 40pt;
+    width: 400px;
+    margin: 0 250px;
+    float: left;
+    border: 1px solid transparent;
+}
+.lang{
+    width: 10%;
+    font-size: 30pt;
+    float: left;
+    margin: 0 auto;
+    padding: 40px 0;
+}
+.contact:hover{
+    border: 1px solid white;
+    border-radius: 10px;
+}
+.row{
+    text-align: center;
+}
 /*-----------------------------------------------------main---------------------------------------------------------*/
+h1{
+    font-size: 70pt;
+    padding: 30px;
+}
+h3{
+    font-size: 50pt;
+    padding: 20px;
+}
+span{
+    font-family: 'Pacifico';
+    color: turquoise;
+}
+p{
+    font-size: 30pt;
+}
+.col-3{
+    width: 20%;
+    padding: 10px;
+    background-color: white;
+    border-radius: 10px;  
+    float: left; 
+    
+}
+.row>.col-3{margin-right: 80px; }
+.row>.col-3:last-child{margin: 0; }
+.col-4{
+    width: 30%;
+    padding: 10px;
+    background-color: white;
+    border-radius: 10px;
+    float: left;   
+}
+.row>.col-4{margin-right: 60px; }
+.row>.col-4:last-child{margin: 0; }
+.col-6{
+    width: 45%;
+    padding: 10px;
+    background-color: white;
+    border-radius: 10px;
+    float: left;  
+    margin: auto;
+
+}
+.row>.col-6{
+    margin-right: 120px; 
+    margin-top: 30px;
+}
+.row>.col-6:last-child{
+    margin: 30px 0;
+}
+.col-3, .col-4, .col-6{
+    text-align: center;
+    font-size: 2em;
+}
+.col-3 a, .col-4 a, .col-6 a{
+    color:black;
+}
+ul{
+    background-color: white;
+    border-radius: 20px;
+}
+li{
+    font-size: 30pt;
+    padding: 10px 20px;
+} 
+li a{
+    color: black;
+}
+ul img{
+    width: 30px;
+}
 /*-----------------------------------------------------footer---------------------------------------------------------*/
+footer{
+    text-align: center;
+}
 /*-----------------------------------------------------adaptive---------------------------------------------------------*/
 /*desktop*/
 @media(min-width:1200px){
     
 }
 /*laptop*/
-@media(min-width:992px){
-
+@media(max-width:992px){
+    .container{
+        width: 100%;
+        margin: auto;
+    }
+    .col-3, .col-4, .col-6{
+        width: 45%;
+        margin: auto;
+    }
+    .row{
+       
+    }
 }
 /*tablet*/
-@media(min-width:768px){
-    
+@media(max-width:768px){
+    .container{
+        width: 100%;
+        margin: auto;
+    }
+    .col-3, .col-4{
+        width: 50%;
+        margin: auto;
+    }
+    .row{
+        
+    }
 }
 /*mobile*/
 @media(max-width:667px){
-
+    .container{
+        width: 100%;
+        margin: auto;
+    }
+    .col-3, .col-4, .col-6{
+        width: 80%;
+        margin: auto;
+    }
+    .row{
+        
+    }
 }
